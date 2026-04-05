@@ -1,0 +1,336 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
+
+
+.container {
+  width: 100%;
+  padding:12px;
+  box-sizing: border-box;
+}
+.navbar{
+  display: flex;
+  justify-content:flex-start;
+  gap: 30px;
+  background-color: rgba(81, 82, 82, 0.17);
+  font-size: 10px;
+  color:white;
+  text-align: center;
+  align-items: center;
+}
+.navbar h1{
+  margin-left: 30px;
+}
+.roleSwitdh{
+  margin-right: 30px;
+  height: 30px;
+  width: 100px;
+  font-weight: bold;
+  font-size: 15px;
+
+}
+.cards {
+  margin: 20px;
+  display: flex;
+  justify-content:center;
+  gap: 20px;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+
+.card1 {
+  background: #6894da;
+  padding: 20px;
+  border-radius: 10px;
+}
+.card2 {
+  background: #56c454;
+  padding: 20px;
+  border-radius: 10px;
+}
+.card3 {
+  background: #d95757;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sec{
+  display: flex;
+  align-items: top;
+  padding: 10px;
+  gap: 10px;
+  
+}
+.big{
+  flex: 2;
+}
+.small{
+  background: #1e293b;
+  border-radius: 6px;
+  padding: 5px;
+  flex: 1;
+  font-size: 16px;
+}
+
+
+/**=== Responsive ===*/
+@media (max-width: 768px) {
+ .navbar h1{
+    font-size: 18px;
+  }
+  .roleSwitdh{
+    width: 50px;
+    font-size: 10px;
+  }
+  .card1, .card2, .card3{
+    font-size: 10px;
+    padding: 10px;
+    flex-direction: column;
+    gap: 10px; 
+  }
+  .sec{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .big{
+    flex: 2;
+  }
+  .small{
+    flex: 1;
+  }
+}
+
+/*==== Charts ====*/
+.charts {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  
+}
+
+.chart-box {
+  flex: 1 1 260px;
+  width: 100%;
+  min-width: 0;
+  height: 300px; 
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  overflow: visible;
+  
+}
+/*=== Responsive ====*/
+@media (max-width:500px){
+  .charts{
+    flex-direction: column;
+  }
+  .chart-box{
+   width: 100%;
+  height: 220px;
+  min-width: 0; 
+
+  }
+}
+
+/* ===== Transactions Section ===== */
+.transaction-container {
+  margin: 0;
+}
+
+/* ===== Top Section (Title + Search + Button) ===== */
+.search-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.search-add h2 {
+  font-size: 22px;
+  color: #fff;
+}
+
+/* Search Input */
+.search-add input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: #fff;
+  min-width: 200px;
+}
+
+/* Add Button */
+.addTrnsaction {
+  padding: 8px 12px;
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addTrnsaction:hover {
+  background: #16a34a;
+}
+
+/* ===== Table ===== */
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Header */
+.transaction-table th {
+  background: #334155;
+  padding: 12px;
+  text-align: left;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Rows */
+.transaction-table td {
+  padding: 5px;
+  border-bottom: 1px solid #475569;
+  color: #e2e8f0;
+}
+
+/* Hover */
+.transaction-table tr:hover {
+  background: #43556f;
+}
+
+/* Inputs inside table */
+.transaction-table input {
+  width: 90%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background: #0f172a;
+  color: #fff;
+}
+
+/* Buttons */
+.transaction-table button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* Edit */
+.transaction-table button:first-child {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Delete */
+.transaction-table button:last-child {
+  background: #ef4444;
+  color: white;
+}
+
+/* Save */
+.transaction-table button:only-child {
+  background: #22c55e;
+  color: white;
+}
+
+/* ===== Type Colors ===== */
+.transaction-table td:nth-child(4) {
+  font-weight: 500;
+}
+
+.transaction-table td:nth-child(4)::first-letter {
+  text-transform: uppercase;
+}
+
+/* Optional: Color coding */
+.transaction-table td:nth-child(4) {
+  color: #f87171; /* default expense */
+}
+
+.transaction-table td:nth-child(4):contains("income") {
+  color: #4ade80;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 500px) {
+  .search-add {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .transaction-table {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .transaction-table th,
+  .transaction-table td {
+    padding: 8px;
+  }
+
+  .transaction-table button {
+    margin-right: 3px;
+    padding: 5px;
+    font-size: 10px;
+  }
+}
+
+
+/* ===== Add Transaction Form ===== */
+
+.form-container{
+   background: #1e293b;
+    border-radius: 6px;
+}
+.form-container h3{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 5px;
+}
+.form-container input, select,.add-btn{
+  margin: 5px;
+}
+
+.add-btn{
+  width: 50px;
+  padding: 5px;
+  background-color:#3ec971;
+}
+.close-btn{
+  width: 70px;
+  padding: 5px;
+  background-color: rgb(241, 84, 84);
+}
+
+/*=== Insights ===*/
+h3{
+  text-decoration: underline;
+  color: rgb(108, 121, 246);
+}
+
+.insights-cards{
+  display: flex;
+  flex-direction: row;
+}
+
