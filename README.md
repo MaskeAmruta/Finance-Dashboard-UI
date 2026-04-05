@@ -8,4 +8,10 @@ Finance Dashboard UI build with React, featuring dynamic charts , reusable compo
 #setup Instructions
 1.clone the repository 
 git clone 
+https://github.com/MaskeAmruta/Finance-Dashboard-UI.git
+2. install dependencies
+npm install
+3. run the project
+npm run dev
+
 
